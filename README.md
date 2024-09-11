@@ -56,6 +56,11 @@ To facilitate seamless integration with popular browsers like Chrome and Firefox
 3. **Protocol Implementations**:
    - Use `gorilla/websocket` for WebSocket support.
    - Leverage `net/http` and `golang.org/x/net/http2` for HTTP/1.1 and HTTP/2 support.
+   - Implement HTTP/3 support using the `quic-go` library and its HTTP/3 implementation.
+   - Utilize HTTP/3 features for improved performance, especially on mobile and unreliable networks:
+     - Faster connection establishment with 0-RTT
+     - Better multiplexing without head-of-line blocking
+     - Connection migration for seamless network switching
 
 4. **Security Features**:
    - Implement Content Security Policy (CSP) enforcement using Go's `net/http` package.
